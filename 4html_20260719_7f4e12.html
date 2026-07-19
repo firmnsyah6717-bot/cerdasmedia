@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluasi - CerdasMedia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Cerdas<span>Media</span></span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="materi.html"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="kuis.html"><i class="fas fa-question-circle"></i> Kuis</a></li>
+                <li><a href="evaluasi.html" class="active"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>📋 Evaluasi Diri</h1>
+            <p>Cek tingkat literasi media sosial dan prokrastinasi akademikmu</p>
+        </div>
+    </section>
+
+    <section class="evaluasi-section">
+        <div class="container">
+            <div class="evaluasi-tabs">
+                <button class="tab-btn active" onclick="showTab('literasi')">
+                    <i class="fas fa-mobile-alt"></i> Literasi Media Sosial
+                </button>
+                <button class="tab-btn" onclick="showTab('prokrastinasi')">
+                    <i class="fas fa-clock"></i> Prokrastinasi Akademik
+                </button>
+            </div>
+
+            <div class="tab-content active" id="tab-literasi">
+                <div class="evaluasi-card">
+                    <h2>🔍 Cek Literasi Media Sosialmu</h2>
+                    <div class="evaluasi-form">
+                        <div class="form-group">
+                            <label>1. Seberapa sering kamu memeriksa kebenaran informasi sebelum membagikannya?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="literasi1" value="4"> Selalu</label>
+                                <label><input type="radio" name="literasi1" value="3"> Sering</label>
+                                <label><input type="radio" name="literasi1" value="2"> Kadang</label>
+                                <label><input type="radio" name="literasi1" value="1"> Jarang</label>
+                                <label><input type="radio" name="literasi1" value="0"> Tidak Pernah</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>2. Apakah kamu bisa membedakan fakta dan opini di media sosial?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="literasi2" value="4"> Sangat bisa</label>
+                                <label><input type="radio" name="literasi2" value="3"> Bisa</label>
+                                <label><input type="radio" name="literasi2" value="2"> Cukup</label>
+                                <label><input type="radio" name="literasi2" value="1"> Kurang</label>
+                                <label><input type="radio" name="literasi2" value="0"> Tidak bisa</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>3. Bagaimana cara menilai kredibilitas sumber informasi?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="literasi3" value="4"> Cek sumber & bukti</label>
+                                <label><input type="radio" name="literasi3" value="3"> Lihat popularitas</label>
+                                <label><input type="radio" name="literasi3" value="2"> Percaya jika banyak share</label>
+                                <label><input type="radio" name="literasi3" value="1"> Tidak pernah cek</label>
+                                <label><input type="radio" name="literasi3" value="0"> Tidak tahu</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>4. Apakah kamu pernah membuat konten positif di media sosial?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="literasi4" value="4"> Sangat sering</label>
+                                <label><input type="radio" name="literasi4" value="3"> Sering</label>
+                                <label><input type="radio" name="literasi4" value="2"> Kadang</label>
+                                <label><input type="radio" name="literasi4" value="1"> Jarang</label>
+                                <label><input type="radio" name="literasi4" value="0"> Tidak pernah</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>5. Apakah kamu menjaga etika digital saat berinteraksi?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="literasi5" value="4"> Selalu</label>
+                                <label><input type="radio" name="literasi5" value="3"> Sering</label>
+                                <label><input type="radio" name="literasi5" value="2"> Kadang</label>
+                                <label><input type="radio" name="literasi5" value="1"> Jarang</label>
+                                <label><input type="radio" name="literasi5" value="0"> Tidak pernah</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="cekLiterasi()">
+                            <i class="fas fa-chart-bar"></i> Lihat Hasil
+                        </button>
+                    </div>
+                    <div class="hasil-evaluasi" id="hasilLiterasi" style="display: none;">
+                        <div class="hasil-box">
+                            <h3>Hasil Evaluasi Literasi</h3>
+                            <div class="hasil-score">
+                                <div class="score-circle" id="literasiScore">0%</div>
+                            </div>
+                            <div class="hasil-desc" id="literasiDesc"></div>
+                            <div class="hasil-rekomendasi" id="literasiRekomendasi"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="tab-prokrastinasi">
+                <div class="evaluasi-card">
+                    <h2>⏰ Cek Prokrastinasi Akademikmu</h2>
+                    <div class="evaluasi-form">
+                        <div class="form-group">
+                            <label>1. Apakah kamu sering menunda mengerjakan tugas sekolah?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="prokrastinasi1" value="4"> Selalu</label>
+                                <label><input type="radio" name="prokrastinasi1" value="3"> Sering</label>
+                                <label><input type="radio" name="prokrastinasi1" value="2"> Kadang</label>
+                                <label><input type="radio" name="prokrastinasi1" value="1"> Jarang</label>
+                                <label><input type="radio" name="prokrastinasi1" value="0"> Tidak pernah</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>2. Apakah kamu belajar hanya saat mendekati ujian?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="prokrastinasi2" value="4"> Selalu</label>
+                                <label><input type="radio" name="prokrastinasi2" value="3"> Sering</label>
+                                <label><input type="radio" name="prokrastinasi2" value="2"> Kadang</label>
+                                <label><input type="radio" name="prokrastinasi2" value="1"> Jarang</label>
+                                <label><input type="radio" name="prokrastinasi2" value="0"> Tidak pernah</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>3. Apakah kamu merasa cemas saat menunda tugas?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="prokrastinasi3" value="4"> Selalu</label>
+                                <label><input type="radio" name="prokrastinasi3" value="3"> Sering</label>
+                                <label><input type="radio" name="prokrastinasi3" value="2"> Kadang</label>
+                                <label><input type="radio" name="prokrastinasi3" value="1"> Jarang</label>
+                                <label><input type="radio" name="prokrastinasi3" value="0"> Tidak pernah</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>4. Apakah kamu lebih memilih main media sosial daripada belajar?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="prokrastinasi4" value="4"> Selalu</label>
+                                <label><input type="radio" name="prokrastinasi4" value="3"> Sering</label>
+                                <label><input type="radio" name="prokrastinasi4" value="2"> Kadang</label>
+                                <label><input type="radio" name="prokrastinasi4" value="1"> Jarang</label>
+                                <label><input type="radio" name="prokrastinasi4" value="0"> Tidak pernah</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>5. Apakah kamu kesulitan mengatur waktu belajar?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="prokrastinasi5" value="4"> Selalu</label>
+                                <label><input type="radio" name="prokrastinasi5" value="3"> Sering</label>
+                                <label><input type="radio" name="prokrastinasi5" value="2"> Kadang</label>
+                                <label><input type="radio" name="prokrastinasi5" value="1"> Jarang</label>
+                                <label><input type="radio" name="prokrastinasi5" value="0"> Tidak pernah</label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="cekProkrastinasi()">
+                            <i class="fas fa-chart-bar"></i> Lihat Hasil
+                        </button>
+                    </div>
+                    <div class="hasil-evaluasi" id="hasilProkrastinasi" style="display: none;">
+                        <div class="hasil-box">
+                            <h3>Hasil Evaluasi Prokrastinasi</h3>
+                            <div class="hasil-score">
+                                <div class="score-circle" id="prokrastinasiScore">0%</div>
+                            </div>
+                            <div class="hasil-desc" id="prokrastinasiDesc"></div>
+                            <div class="hasil-rekomendasi" id="prokrastinasiRekomendasi"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>CerdasMedia</span>
+                    <p>Media edukasi tentang literasi media sosial untuk mengurangi prokrastinasi akademik siswa SMP.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="materi.html">Materi</a></li>
+                        <li><a href="kuis.html">Kuis</a></li>
+                        <li><a href="evaluasi.html">Evaluasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Modul</h4>
+                    <ul>
+                        <li><a href="materi.html#modul1">Literasi Media Sosial</a></li>
+                        <li><a href="materi.html#modul2">Dimensi Literasi</a></li>
+                        <li><a href="materi.html#modul3">Prokrastinasi</a></li>
+                        <li><a href="materi.html#modul4">Strategi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CerdasMedia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function showTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            document.getElementById('tab-' + tab).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        function cekLiterasi() {
+            const inputs = document.querySelectorAll('#tab-literasi input[type="radio"]:checked');
+            let total = 0;
+            const maxScore = 5 * 4;
+            inputs.forEach(input => total += parseInt(input.value));
+            const percentage = Math.round((total / maxScore) * 100);
+            
+            let desc, rekomendasi;
+            if (percentage >= 80) {
+                desc = '🎉 <strong>Luar Biasa!</strong> Literasi media sosialmu sangat baik!';
+                rekomendasi = '✅ Pertahankan dan ajak teman-temanmu!';
+            } else if (percentage >= 60) {
+                desc = '👍 <strong>Bagus!</strong> Pemahamanmu sudah cukup baik.';
+                rekomendasi = '📖 Pelajari kembali materi tentang dimensi literasi media sosial.';
+            } else {
+                desc = '📚 <strong>Perlu Belajar Lagi!</strong> Tingkatkan pemahamanmu.';
+                rekomendasi = '📖 Baca ulang materi "Literasi Media Sosial".';
+            }
+
+            document.getElementById('literasiScore').textContent = percentage + '%';
+            document.getElementById('literasiDesc').innerHTML = desc;
+            document.getElementById('literasiRekomendasi').innerHTML = rekomendasi;
+            document.getElementById('hasilLiterasi').style.display = 'block';
+        }
+
+        function cekProkrastinasi() {
+            const inputs = document.querySelectorAll('#tab-prokrastinasi input[type="radio"]:checked');
+            let total = 0;
+            const maxScore = 5 * 4;
+            inputs.forEach(input => total += parseInt(input.value));
+            const percentage = Math.round((total / maxScore) * 100);
+            
+            let desc, rekomendasi;
+            if (percentage >= 80) {
+                desc = '⚠️ <strong>Prokrastinasi Tinggi!</strong> Perlu segera diatasi.';
+                rekomendasi = '🔹 Terapkan teknik Pomodoro<br>🔹 Batasi penggunaan media sosial';
+            } else if (percentage >= 50) {
+                desc = '😊 <strong>Prokrastinasi Sedang!</strong> Masih bisa diperbaiki.';
+                rekomendasi = '🔹 Mulai dari tugas yang mudah<br>🔹 Buat to-do list harian';
+            } else {
+                desc = '🌟 <strong>Prokrastinasi Rendah!</strong> Pertahankan kebiasaan baik!';
+                rekomendasi = '✅ Terus pertahankan kebiasaan baik ini!';
+            }
+
+            document.getElementById('prokrastinasiScore').textContent = percentage + '%';
+            document.getElementById('prokrastinasiDesc').innerHTML = desc;
+            document.getElementById('prokrastinasiRekomendasi').innerHTML = rekomendasi;
+            document.getElementById('hasilProkrastinasi').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

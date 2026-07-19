@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi - CerdasMedia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Cerdas<span>Media</span></span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="materi.html" class="active"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="kuis.html"><i class="fas fa-question-circle"></i> Kuis</a></li>
+                <li><a href="evaluasi.html"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>📚 Materi Pembelajaran</h1>
+            <p>Pelajari 4 modul tentang literasi media sosial dan prokrastinasi akademik</p>
+        </div>
+    </section>
+
+    <!-- MODUL 1 -->
+    <section class="materi-section" id="modul1">
+        <div class="container">
+            <div class="modul-header">
+                <span class="modul-number">Modul 1</span>
+                <h2>📱 Pengantar Literasi Media Sosial</h2>
+            </div>
+            
+            <div class="materi-grid">
+                <div class="materi-card" onclick="toggleMateri(this)">
+                    <div class="materi-icon">📖</div>
+                    <h3>Apa itu Literasi Media Sosial?</h3>
+                    <div class="materi-content">
+                        <p>Literasi media sosial adalah kemampuan seseorang dalam menggunakan media sosial secara efektif, kritis, dan bertanggung jawab. Ini mencakup kemampuan menerima, mencerna, serta menganalisis informasi yang diperoleh melalui berbagai media sosial.</p>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="materi-card" onclick="toggleMateri(this)">
+                    <div class="materi-icon">🌍</div>
+                    <h3>Pentingnya Literasi di Era Digital</h3>
+                    <div class="materi-content">
+                        <p>Di era digital, kemampuan literasi media menjadi sama pentingnya dengan penguasaan ilmu pengetahuan lainnya. Generasi muda perlu dibekali kemampuan memanfaatkan teknologi dan media sosial secara bijak, kritis, dan bertanggung jawab.</p>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="materi-card" onclick="toggleMateri(this)">
+                    <div class="materi-icon">⚖️</div>
+                    <h3>Dampak Positif dan Negatif Media Sosial</h3>
+                    <div class="materi-content">
+                        <div class="dampak-grid">
+                            <div class="dampak positif">
+                                <h4>✅ Positif</h4>
+                                <ul>
+                                    <li>Memudahkan komunikasi</li>
+                                    <li>Akses informasi luas</li>
+                                    <li>Sarana pembelajaran</li>
+                                    <li>Kreativitas dan ekspresi</li>
+                                </ul>
+                            </div>
+                            <div class="dampak negatif">
+                                <h4>❌ Negatif</h4>
+                                <ul>
+                                    <li>Kecanduan digital</li>
+                                    <li>Prokrastinasi akademik</li>
+                                    <li>Penyebaran hoaks</li>
+                                    <li>Gangguan kesehatan mental</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODUL 2 -->
+    <section class="materi-section" id="modul2" style="background: #f8faff;">
+        <div class="container">
+            <div class="modul-header">
+                <span class="modul-number">Modul 2</span>
+                <h2>🧠 Dimensi Literasi Media Sosial</h2>
+                <p class="modul-desc">Model literasi media oleh Renee Hobbs</p>
+            </div>
+
+            <div class="dimensi-grid">
+                <div class="dimensi-card" onclick="toggleDimensi(this)">
+                    <div class="dimensi-icon" style="background: #E8F5E9; color: #2E7D32;">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Access (Mengakses)</h3>
+                    <div class="dimensi-content">
+                        <p>Kemampuan mengakses berbagai media digital dan memperoleh informasi melalui perangkat teknologi secara efektif.</p>
+                        <div class="dimensi-tips">💡 Gunakan media sosial untuk mencari informasi yang bermanfaat, bukan hanya hiburan.</div>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="dimensi-card" onclick="toggleDimensi(this)">
+                    <div class="dimensi-icon" style="background: #E3F2FD; color: #1565C0;">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Analyze (Menganalisis)</h3>
+                    <div class="dimensi-content">
+                        <p>Kemampuan memahami isi, tujuan, dan makna pesan yang disampaikan melalui media sosial. Membedakan fakta dan opini.</p>
+                        <div class="dimensi-tips">💡 Selalu tanyakan: "Apakah ini fakta atau opini?"</div>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="dimensi-card" onclick="toggleDimensi(this)">
+                    <div class="dimensi-icon" style="background: #FFF3E0; color: #E65100;">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3>Evaluate (Mengevaluasi)</h3>
+                    <div class="dimensi-content">
+                        <p>Kemampuan menilai kredibilitas sumber informasi dan mempertimbangkan dampak sebelum mempercayai atau menyebarkan.</p>
+                        <div class="dimensi-tips">💡 Cek 5 hal: Sumber, Fakta, Tanggal, Bias, dan Cek Hoaks.</div>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="dimensi-card" onclick="toggleDimensi(this)">
+                    <div class="dimensi-icon" style="background: #F3E5F5; color: #6A1B9A;">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Create (Menciptakan)</h3>
+                    <div class="dimensi-content">
+                        <p>Kemampuan menghasilkan dan menyebarluaskan konten digital yang kreatif, informatif, dan bertanggung jawab.</p>
+                        <div class="dimensi-tips">💡 Buat konten yang bermanfaat untuk orang lain.</div>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="dimensi-card" onclick="toggleDimensi(this)">
+                    <div class="dimensi-icon" style="background: #FFEBEE; color: #C62828;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Act (Bertindak)</h3>
+                    <div class="dimensi-content">
+                        <p>Kemampuan menggunakan media sosial secara bertanggung jawab, menjaga etika digital, dan berpartisipasi positif.</p>
+                        <div class="dimensi-tips">💡 Jadilah agen perubahan positif di dunia digital.</div>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODUL 3 -->
+    <section class="materi-section" id="modul3">
+        <div class="container">
+            <div class="modul-header">
+                <span class="modul-number">Modul 3</span>
+                <h2>⏰ Prokrastinasi Akademik</h2>
+            </div>
+
+            <div class="materi-grid">
+                <div class="materi-card" onclick="toggleMateri(this)">
+                    <div class="materi-icon">📝</div>
+                    <h3>Pengertian Prokrastinasi Akademik</h3>
+                    <div class="materi-content">
+                        <p>Prokrastinasi akademik adalah aktivitas menghabiskan waktu terlalu lama, mengulur-ulur, atau secara sengaja menghindar untuk mengerjakan sesuatu yang harusnya diselesaikan.</p>
+                        <p><strong>Ciri-ciri:</strong> Menunda tugas, terlambat masuk kelas, tidak mempersiapkan diri untuk ujian.</p>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="materi-card" onclick="toggleMateri(this)">
+                    <div class="materi-icon">🔍</div>
+                    <h3>Faktor Penyebab Prokrastinasi</h3>
+                    <div class="materi-content">
+                        <ul>
+                            <li><strong>Kecemasan</strong> - Takut gagal atau dievaluasi</li>
+                            <li><strong>Kesulitan mengambil keputusan</strong></li>
+                            <li><strong>Rendahnya motivasi</strong> - Kurangnya minat pada tugas</li>
+                            <li><strong>Perfeksionisme</strong> - Ingin hasil sempurna</li>
+                            <li><strong>Distraksi digital</strong> - Godaan media sosial</li>
+                        </ul>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="materi-card" onclick="toggleMateri(this)">
+                    <div class="materi-icon">📉</div>
+                    <h3>Dampak Prokrastinasi terhadap Prestasi</h3>
+                    <div class="materi-content">
+                        <ul>
+                            <li><strong>⬇️ Penurunan Prestasi</strong> - Nilai lebih rendah</li>
+                            <li><strong>📉 Kualitas Tugas Menurun</strong> - Dikerjakan terburu-buru</li>
+                            <li><strong>😰 Stres dan Tekanan Mental</strong> - Kecemasan meningkat</li>
+                            <li><strong>🔄 Lingkaran Prokrastinasi</strong> - Menjadi kebiasaan buruk</li>
+                        </ul>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="materi-card" onclick="toggleMateri(this)">
+                    <div class="materi-icon">📱</div>
+                    <h3>Hubungan Media Sosial dengan Prokrastinasi</h3>
+                    <div class="materi-content">
+                        <p>Penelitian menunjukkan bahwa penggunaan media sosial yang tidak terkontrol dapat menyebabkan siswa menghabiskan banyak waktu untuk aktivitas non-akademik, sehingga mengurangi waktu belajar dan memicu prokrastinasi.</p>
+                        <div class="highlight-box">
+                            <i class="fas fa-chart-line"></i>
+                            <p><strong>Fakta:</strong> 99,16% remaja (13-18 tahun) adalah pengguna media sosial.</p>
+                        </div>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODUL 4 -->
+    <section class="materi-section" id="modul4" style="background: #f8faff;">
+        <div class="container">
+            <div class="modul-header">
+                <span class="modul-number">Modul 4</span>
+                <h2>🚀 Strategi Mengurangi Prokrastinasi</h2>
+            </div>
+
+            <div class="strategi-grid">
+                <div class="strategi-card" onclick="toggleStrategi(this)">
+                    <div class="strategi-number">1</div>
+                    <i class="fas fa-calendar-check" style="font-size: 2.5rem; color: #2E7D32;"></i>
+                    <h3>Manajemen Waktu</h3>
+                    <div class="strategi-content">
+                        <ul>
+                            <li>Buat jadwal belajar harian</li>
+                            <li>Prioritaskan tugas penting</li>
+                            <li>Gunakan to-do list</li>
+                            <li>Hindari multitasking</li>
+                        </ul>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="strategi-card" onclick="toggleStrategi(this)">
+                    <div class="strategi-number">2</div>
+                    <i class="fas fa-tomato" style="font-size: 2.5rem; color: #E65100;"></i>
+                    <h3>Teknik Pomodoro</h3>
+                    <div class="strategi-content">
+                        <ul>
+                            <li>25 menit fokus belajar</li>
+                            <li>5 menit istirahat</li>
+                            <li>Ulangi 4 kali</li>
+                            <li>Istirahat panjang 15-30 menit</li>
+                        </ul>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="strategi-card" onclick="toggleStrategi(this)">
+                    <div class="strategi-number">3</div>
+                    <i class="fas fa-mobile-slash" style="font-size: 2.5rem; color: #1565C0;"></i>
+                    <h3>Pengaturan Media Sosial</h3>
+                    <div class="strategi-content">
+                        <ul>
+                            <li>Batas waktu penggunaan</li>
+                            <li>Nonaktifkan notifikasi</li>
+                            <li>Gunakan app blocker</li>
+                            <li>Digital detox rutin</li>
+                        </ul>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+
+                <div class="strategi-card" onclick="toggleStrategi(this)">
+                    <div class="strategi-number">4</div>
+                    <i class="fas fa-heart" style="font-size: 2.5rem; color: #C62828;"></i>
+                    <h3>Membangun Kebiasaan Belajar Positif</h3>
+                    <div class="strategi-content">
+                        <ul>
+                            <li>Mulai dari tugas kecil</li>
+                            <li>Berikan reward pada diri sendiri</li>
+                            <li>Belajar bersama teman</li>
+                            <li>Jaga kesehatan fisik dan mental</li>
+                        </ul>
+                    </div>
+                    <span class="materi-toggle">Klik untuk baca ➜</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Sudah Siap Uji Pemahamanmu?</h2>
+                <p>Kerjakan kuis interaktif untuk mengukur pemahamanmu!</p>
+                <a href="kuis.html" class="btn btn-primary">
+                    <i class="fas fa-question-circle"></i> Mulai Kuis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>CerdasMedia</span>
+                    <p>Media edukasi tentang literasi media sosial untuk mengurangi prokrastinasi akademik siswa SMP.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="materi.html">Materi</a></li>
+                        <li><a href="kuis.html">Kuis</a></li>
+                        <li><a href="evaluasi.html">Evaluasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Modul</h4>
+                    <ul>
+                        <li><a href="materi.html#modul1">Literasi Media Sosial</a></li>
+                        <li><a href="materi.html#modul2">Dimensi Literasi</a></li>
+                        <li><a href="materi.html#modul3">Prokrastinasi</a></li>
+                        <li><a href="materi.html#modul4">Strategi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CerdasMedia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        function toggleMateri(el) { el.classList.toggle('active'); }
+        function toggleDimensi(el) { el.classList.toggle('active'); }
+        function toggleStrategi(el) { el.classList.toggle('active'); }
+    </script>
+</body>
+</html>

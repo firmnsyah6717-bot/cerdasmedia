@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis - CerdasMedia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Cerdas<span>Media</span></span>
+                </a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="materi.html"><i class="fas fa-book"></i> Materi</a></li>
+                <li><a href="kuis.html" class="active"><i class="fas fa-question-circle"></i> Kuis</a></li>
+                <li><a href="evaluasi.html"><i class="fas fa-clipboard-check"></i> Evaluasi</a></li>
+                <li><a href="tentang.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>🧠 Kuis Literasi Media Sosial</h1>
+            <p>Jawab 15 pertanyaan berikut untuk mengukur pemahamanmu!</p>
+            <div class="kuis-info">
+                <span><i class="fas fa-question-circle"></i> 15 Pertanyaan</span>
+                <span><i class="fas fa-clock"></i> ± 10 Menit</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="kuis-section">
+        <div class="container">
+            <div class="kuis-container" id="kuisContainer">
+                <div class="kuis-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="kuisProgress" style="width: 0%;"></div>
+                    </div>
+                    <span id="progressText">Pertanyaan 1 dari 15</span>
+                </div>
+                <div class="kuis-content" id="kuisContent"></div>
+                <div class="kuis-navigation">
+                    <button class="btn-nav" id="prevBtn" onclick="prevQuestion()" style="display: none;">
+                        <i class="fas fa-arrow-left"></i> Sebelumnya
+                    </button>
+                    <button class="btn-nav btn-primary" id="nextBtn" onclick="nextQuestion()">
+                        Selanjutnya <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="kuis-result" id="kuisResult" style="display: none;">
+                <div class="result-box">
+                    <div class="result-icon" id="resultIcon"><i class="fas fa-trophy"></i></div>
+                    <h2 id="resultTitle">Hasil Kuis Kamu</h2>
+                    <div class="result-score">
+                        <span class="score-number" id="scoreNumber">0</span>
+                        <span class="score-total">/ 15</span>
+                    </div>
+                    <div class="result-percentage" id="resultPercentage">0%</div>
+                    <div class="result-message" id="resultMessage"></div>
+                    <div class="result-details" id="resultDetails"></div>
+                    <div class="result-buttons">
+                        <button onclick="resetKuis()" class="btn btn-primary">
+                            <i class="fas fa-redo"></i> Ulangi Kuis
+                        </button>
+                        <a href="evaluasi.html" class="btn btn-secondary">
+                            <i class="fas fa-clipboard-check"></i> Evaluasi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>CerdasMedia</span>
+                    <p>Media edukasi tentang literasi media sosial untuk mengurangi prokrastinasi akademik siswa SMP.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="materi.html">Materi</a></li>
+                        <li><a href="kuis.html">Kuis</a></li>
+                        <li><a href="evaluasi.html">Evaluasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Modul</h4>
+                    <ul>
+                        <li><a href="materi.html#modul1">Literasi Media Sosial</a></li>
+                        <li><a href="materi.html#modul2">Dimensi Literasi</a></li>
+                        <li><a href="materi.html#modul3">Prokrastinasi</a></li>
+                        <li><a href="materi.html#modul4">Strategi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CerdasMedia</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/kuis.js"></script>
+</body>
+</html>
